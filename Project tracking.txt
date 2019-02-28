@@ -1,0 +1,30 @@
+The first schematic and prototype are verifications of the logical process in the circuit.
+
+Part 2 is a minimisation of this, using only one or gate rather than multiple.  The diode in parellel with the resistor is important because it allows some of the 
+DC 5v through it while the capacitor cannot discharge opposite it,  like it can the resistor, this means that a steady supply of voltage is going in opposing the capacitor
+so that it does not damage our 5v and gate.
+
+The usage of our resistor R1 allows our edge to detector to function just for the first signal is receives, at the end of the signal C1 will have discharged fully and would
+be charged by V2, causing a large drop in voltage and current going to A1, this will then be inverted into a outgoing 1 signal, signifying that the edge has read some 
+signal.
+
+With prototype the period of V2, and the capacitance have been reduced, this makes the circuit far more responsive, since 1/2(pi)fC applies, V2 will charge up C1 very quickly
+but it will sink all of its voltage doing so, allowing our circuit to output an inverted signal.
+
+Astable multivibrator:
+
+This generates and oscillating signal as C1 is discharged and subsequently charged as it drops below the voltage threshold for A1. The 2.2MEG resistor influences the rate of
+charge/discharge of C1. I cannot measure a frequency change, just time to charge.
+
+MonoStable multivibrator:
+
+This generates a long output signal for a short input, this is due to the input causing Nor gate A1 to output 0, this causes C1 to discharge against V1 (It would have been
+charging ontop of a 5v output from A1 previously). This lowers the voltage going into A2 to less than 2.5vs activating it's nor property, this then causes a loop of A1
+not outputting a voltage until C1 is discharged enough to have low enough resistance that more than 2.5v from V1 is across A2.
+
+Does not change for different voltages, only resistor influences discharge time. Does not reset start pulse if another input source is provided. A diode should also be used
+to protect the device.
+
+All of these pieces can be combined into a logic probe.
+
+They are combined in an interesting way:

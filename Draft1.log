@@ -1,0 +1,21 @@
+Circuit: * C:\Users\Sam B\Desktop\Logic probe\Draft1.asc
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Tue Feb 26 12:06:51 2019
+Total elapsed time: 0.069 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 3133
+traniter = 3127
+tranpoints = 1502
+accept = 1414
+rejected = 88
+matrix size = 7
+fillins = 0
+solver = Normal
+Matrix Compiler1: 160 bytes object code size  0.1/0.0/[0.0]
+Matrix Compiler2: 379 bytes object code size  0.0/0.1/[0.0]
+
